@@ -1,0 +1,42 @@
+<!-- <div>
+    <label for="">Search: </label>
+    <input type="text" #inputname id="search"  (keyup)="searchBook(inputname.value)"  >
+    <button (click)="searchBook(inputname.value)" >Search</button>
+</div>
+
+<div *ngIf="bookList.length > 0">
+    <div *ngFor="let book of bookList">
+      {{ book.name }}
+    </div>
+  </div>
+  
+  <div *ngIf="bookList.length === 0">
+    No books found for your search.
+  </div>
+
+  <div class="card flex justify-content-center">
+    <p-floatLabel>
+        <input pInputText id="username"  [(ngModel)]="value" />
+        <label for="username">Username</label>
+    </p-floatLabel>
+</div> -->
+<div class="card">
+  <p-table [value]="products" [tableStyle]="{ 'min-width': '50rem' }">
+      <ng-template pTemplate="header">
+          <tr>
+              <th>Code</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Quantity</th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-product>
+          <tr>
+              <td>{{ product.code }}</td>
+              <td>{{ product.name }}</td>
+              <td>{{ product.category }}</td>
+              <td>{{ product.quantity }}</td>
+          </tr>
+      </ng-template>
+  </p-table>
+</div>
