@@ -11,24 +11,24 @@ export class AppComponent {
   title = 'my-app';
   products: Product[] = [];
   filterProducts: Product[] = this.products;
+  employeeList = [];
 
-
-  constructor(private http: HttpClient){
-    this.http.get<Product[]>(`/api/product`).subscribe((res)=>{
-      console.log(res);
-      this.products = res;
-      this.filterProducts = this.products;
-    })
-    console.log(environment.production); // Logs false for development environment
-
-  }
-
-  searchProduct(text: string){
-    this.filterProducts = this.products.filter(product=>{
-      const productName = product.name.toLowerCase();
-      const searchName = text.toLowerCase();
-      return productName.indexOf(searchName) !== -1
-    })
+  constructor(){
+    // this.http.get<Product[]>(`/api/product`).subscribe((res)=>{
+    //   console.log(res);
+    //   this.products = res;
+    //   this.filterProducts = this.products;
+    // })
+    // console.log(environment.production); 
 
   }
+
+  // searchProduct(text: string){
+  //   this.filterProducts = this.products.filter(product=>{
+  //     const productName = product.name.toLowerCase();
+  //     const searchName = text.toLowerCase();
+  //     return productName.indexOf(searchName) !== -1
+  //   })
+  // }
+
 }

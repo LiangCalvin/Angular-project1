@@ -9,7 +9,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {Component} from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
+// import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
 import { TestRequestModule } from './modules/test-request/test-request.module';
@@ -17,28 +17,52 @@ import { InputTextModule } from 'primeng/inputtext';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ShoppingModule } from './modules/shopping/shopping.module';
 import { HttpBookDirective } from './modules/book/http-book.directive';
+import { Form01Component } from './modules/form/form01/form01.component';
+import { ButtonModule } from 'primeng/button';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FloatLabelModule } from 'primeng/floatlabel';
+import { MessagesModule } from 'primeng/messages';
+import { PokemonModule } from './modules/pokemon/pokemon.module';
+import { PokemonInfoComponent } from './modules/pokemon/pokemon-info/pokemon-info.component';
+import { MatTableModule } from '@angular/material/table';
+import { PipePokemonModule } from "../shared/pipe/pipe-pokemon/pipe-pokemon.module";
+import { Table, TableModule } from 'primeng/table';
+import { ViewChildComponent } from './modules/view-child/view-child.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    FooterComponent,
-    HttpBookDirective,
-  ],
-  imports: [
+    declarations: [
+        AppComponent,
+        NavbarComponent,
+        FooterComponent,
+        HttpBookDirective,
+        Form01Component,
+        PokemonInfoComponent,
+        ViewChildComponent,
+        ViewChildComponent
+    ],
+    providers: [
+        provideClientHydration(),
+        provideAnimationsAsync()
+    ],
+    bootstrap: [AppComponent],
+    imports: [
     BrowserModule,
     AppRoutingModule,
-    MatSlideToggleModule,MatToolbarModule, MatButtonModule, MatIconModule,
+    MatSlideToggleModule, MatToolbarModule, MatIconModule,
     HttpClientModule,
     TestRequestModule,
     InputTextModule,
     BrowserAnimationsModule,
-    ShoppingModule
-  ],
-  providers: [
-    provideClientHydration(),
-    provideAnimationsAsync()
-  ],
-  bootstrap: [AppComponent]
+    ShoppingModule,
+    ButtonModule,
+    CommonModule,
+    FormsModule, FloatLabelModule,
+    MessagesModule,
+    ReactiveFormsModule,
+    MatTableModule,
+    PipePokemonModule,
+    TableModule
+]
 })
 export class AppModule { }

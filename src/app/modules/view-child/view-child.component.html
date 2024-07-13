@@ -1,0 +1,14 @@
+<p>view-child works!</p>
+<img #codeimg
+*ngIf="isShowimg"
+src="https://media.allure.com/photos/6543f5a166ac0a71e8d7612f/16:9/w_1280,c_limit/kylie%20jenner%202023.jpg" 
+alt=""
+style ="width: 175px"
+class="transition-width"
+>
+<input type="checkbox" id="toggle-checkbox" [(ngModel)]="isShowimg" />
+<div>
+    <button (click)="small()">small</button>
+    <button (click)="medium()">medium</button>
+    <button (click)="large()">large</button>
+</div>

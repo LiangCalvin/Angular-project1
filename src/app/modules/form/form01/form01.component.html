@@ -1,0 +1,70 @@
+<div class="container" style="display: flex; margin: 10px">
+  <div class="card" style="margin: 25px">
+    <!-- <p-floatLabel>
+      <input
+        pInputText
+        required
+        
+        [formControl]="weightF"
+      />
+      <label for="username">Weight</label>
+    </p-floatLabel>
+
+    <div style="margin-top: 25px">
+      <p-floatLabel>
+        <input pInputText id="pass" required         
+        [formControl]="heightF"
+        />
+        <label for="username">Height</label>
+      </p-floatLabel>
+    </div>
+    <div class="flex justify-content-center" style="margin-top: 25px">
+      <p-button (onClick)="calbmi()" label="Calculate BMI" />
+    </div>
+    <div> BMI = {{bmi}}</div>
+    <span *ngIf="weightF.invalid && weightF.touched" >please fill Weight </span>
+    <span *ngIf="heightF.invalid && heightF.touched" >please fill Height</span> -->
+
+    <!-- <p-floatLabel>
+        <input
+          pInputText
+          type="email"
+          id="email"
+          [formControl]="emailF"
+          required
+          email
+          #emailInput
+        />
+        <label for="email">Email</label>
+      </p-floatLabel>
+  
+      <div class="flex justify-content-center" style="margin-top: 25px">
+        <p-button [disabled]="emailF.invalid" label="Submit"  />
+      </div>
+      <small id="email-help" class="p-error" *ngIf="emailF.errors && (emailF.dirty || emailF.touched)">
+        <span *ngIf="emailF.errors ['required']">Email is required.</span>
+        <span *ngIf="emailF.errors ['email']">Invalid email format (e.g., john.doe&#64;example.com).</span>
+      </small> -->
+
+      <p-floatLabel>
+        <input
+          pInputText
+          type="text"
+          [formControl]="idCard"
+          required
+        />
+        <label for="email">ID card</label>
+      </p-floatLabel>
+  
+      <div class="flex justify-content-center" style="margin-top: 25px">
+        <p-button [disabled]="idCard.invalid" label="Submit"  />
+      </div>
+      <small id="email-help" class="p-error" *ngIf="idCard.errors && (idCard.dirty || idCard.touched)">
+        <span *ngIf="idCard.errors ['required']">ID card is required.</span>
+        <span *ngIf="idCard.errors ['minlength']">ID Card must be at least 13 digits long.</span>
+        <span *ngIf="idCard.errors ['idCard']">Invalid Identity Number</span>
+    </small>
+    {{idCard.errors | json}}
+
+  </div>
+</div>

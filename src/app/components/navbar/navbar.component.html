@@ -1,4 +1,4 @@
-<mat-toolbar>
+<!-- <mat-toolbar>
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>
     </button>
@@ -10,5 +10,14 @@
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
       <mat-icon>share</mat-icon>
     </button>
-  </mat-toolbar>
-  
+  </mat-toolbar> -->
+  <div class="container">
+    <header class="container-header">
+      <a href="">Home</a>
+      <a href="">Student</a>
+      <a href="">Add Student</a>
+    </header>
+    <main>Content</main>
+  <button (click)="active = !active" >Click here</button>
+  <p class="content" [class.content.style] = "active" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus minus unde fugiat labore saepe voluptatibus! Expedita vitae earum ex? Et rem sapiente tempora eos doloribus soluta ut voluptatibus sunt voluptatum?</p>
+</div>
