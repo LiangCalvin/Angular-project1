@@ -16,12 +16,14 @@ import { TestRequestModule } from './modules/test-request/test-request.module';
 import { InputTextModule } from 'primeng/inputtext';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ShoppingModule } from './modules/shopping/shopping.module';
+import { HttpBookDirective } from './modules/book/http-book.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
+    HttpBookDirective,
   ],
   imports: [
     BrowserModule,

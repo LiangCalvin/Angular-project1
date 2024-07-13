@@ -1,1 +1,6 @@
-<app-shoppingsearch></app-shoppingsearch>
+<app-shoppingsearch (onSearch)="searchProduct($event)" ></app-shoppingsearch> 
+<div>
+    <div *ngFor="let product of filterProducts">
+        {{product.name}} {{product.price}}
+    </div>
+</div>

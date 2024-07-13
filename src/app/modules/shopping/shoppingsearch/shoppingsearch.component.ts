@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { auditTime, debounceTime } from 'rxjs';
 
 @Component({
   selector: 'app-shoppingsearch',
@@ -7,6 +8,19 @@ import { Component } from '@angular/core';
 
 })
 export class ShoppingsearchComponent {
-  value: string | undefined;
+  @Output() onInput = new EventEmitter<string>();
+  @Output() onSearch = this.onInput.pipe(auditTime(400));
+  // value: string | undefined;
+
+  constructor() {}
+
+  ngOnInit(): void {
+
+  }
+
+  inputSearch(text: string){
+    this.onInput.emit(text);
+    console.log("inputsearch:",text)
+  }
 
 }

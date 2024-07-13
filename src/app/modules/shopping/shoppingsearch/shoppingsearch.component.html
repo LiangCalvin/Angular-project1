@@ -1,9 +1,6 @@
-<div class="container">
-    <div>
-        head
-    </div>
-        <p-floatLabel>
-            <input pInputText id="username" [(ngModel)]="value" />
+<div class="container" style="margin-top: 20px">
+        <p-floatLabel >
+            <input pInputText id="username" #inputEl (input)="inputSearch(inputEl.value)"  />
             <label for="username">Username</label>
         </p-floatLabel>
 </div>
